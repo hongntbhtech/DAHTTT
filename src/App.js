@@ -8,6 +8,9 @@ import HomeClient from './Pages/HomeClient/index.js';
 import CourseFee from './Pages/CourseFee/index.js'
 import CourseFree from './Pages/CourseFree/index.js';
 import Blog from './Pages/Blog/index.js';
+import Course from './Pages/Course/index.js';
+import CourseSale from './Pages/CourseSale/index.js';
+import BlogDetail from './Pages/BlogDetails/index.js';
 
 function App() {
   return (
@@ -20,6 +23,9 @@ function App() {
         <Route path='/coursefee' element={<CourseFee/>}/>
         <Route path='/coursefree' element={<CourseFree/>}/>
         <Route path='/blog' element={<Blog/>}/>
+        <Route path='/course' element={<Course/>}/>
+        <Route path='/coursesale' element={<CourseSale/>}/>
+        <Route path='blogdetail' element={<BlogDetail/>}/>
       </Routes> 
     </>
   );
