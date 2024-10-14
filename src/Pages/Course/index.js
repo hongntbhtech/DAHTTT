@@ -16,7 +16,7 @@ function Course(){
             <LayoutHeader></LayoutHeader>
         </div>
 
-        <div className="max-[1188px] pl-[24px] pr-[24px] mx-auto pt-[50px]">
+        <div className="max-[1188px] pl-[24px] pr-[24px] mx-auto pt-[50px] font-poppins">
             <h1 className="font-bold text-[50px] leading-[75px] text-center">
                Khóa học
             </h1>

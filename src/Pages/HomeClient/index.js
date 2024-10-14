@@ -22,7 +22,7 @@ import img_twitter from '../../assets/HomeClient/img_twitter.png'
 import img_face from '../../assets/HomeClient/img_face.png'
 import img_ins from '../../assets/HomeClient/img_insta.png'
 import Footer from "../../components/Footer";
-
+import { Link } from 'react-router-dom'
 
 
 function HomeClient() {
@@ -30,14 +30,12 @@ function HomeClient() {
         <>
             <div className="bg-no-repeat" style={{ backgroundImage: `url(${bg_home})` }}>
                 <LayoutHeader>
-                    <div className="max-w-[1345px] mx-auto pl-[78px] pr-[24px]  flex justify-between pt-[66px]">
+                    <div className="max-w-[1345px] mx-auto pl-[78px] pr-[24px]  flex justify-between pt-[66px] font-poppins">
                         <div className="max-w-[614.46px]">
                             <h1 className="font-semibold text-[50px] leading-[75px] max-w-[540px]">Học lập trình cùng CODE TECHNOLOGY</h1>
                             <p className="font-normal text-[16px] leading-[28px] pt-[36px] max-w-[600px] text-justify">Với sự đa dạng khóa học và đội ngũ chuyên gia hàng đầu giảng dạy, mở ra con đường thành công ngay trong tầm tay bạn.</p>
 
-                            <div className="pt-[46px]">
-                                <button className="w-[139px] h-[52px] rounded-[14px] font-semibold text-[16px] leading-[24px] tracking-[1.6px] text-center text-[#ffffff] bg-black">Chi tiết</button>
-                            </div>
+                           
                         </div>
 
                         <div className="pr-[5px]">
@@ -47,7 +45,7 @@ function HomeClient() {
                 </LayoutHeader>
             </div>
 
-            <div className="max-w-[1288px] mx-auto pl-[24px] pr-[24px] pt-[180px]">
+            <div className="max-w-[1288px] mx-auto pl-[24px] pr-[24px] pt-[180px] font-poppins">
                 <div className="">
                     <h1 className="font-semibold text-[50px] leading-[62.5px] text-center">Khóa học giảm giá</h1>
                 </div>
@@ -67,7 +65,8 @@ function HomeClient() {
 
                                 </div>
 
-                                <div className="max-w-[126px] flex justify-between pt-[18px]">
+                                <Link to='/coursefee' className="max-w-[126px] flex justify-between pt-[18px]">
+                                    {/* <Link> */}
                                     <div className="w-[41px] h-[41px] rounded-full bg-[#000] pt-[10px]">
                                         <img className="m-0 m-auto" src={vector_direct} alt="abc"></img>
                                     </div>
@@ -76,7 +75,8 @@ function HomeClient() {
                                             Chi tiết
                                         </p>
                                     </div>
-                                </div>
+                                    {/* </Link> */}
+                                </Link>
 
                             </div>
 
@@ -103,7 +103,7 @@ function HomeClient() {
 
                                     </div>
 
-                                    <div className="max-w-[126px] flex justify-between pt-[18px]">
+                                    <Link to='/coursefee' className="max-w-[126px] flex justify-between pt-[18px]">
                                         <div className="w-[41px] h-[41px] rounded-full bg-[#000] pt-[10px]">
                                             <img className="m-0 m-auto" src={vector_direct} alt="abc"></img>
                                         </div>
@@ -112,7 +112,7 @@ function HomeClient() {
                                                 Chi tiết
                                             </p>
                                         </div>
-                                    </div>
+                                    </Link>
                                 </div>
                             </div>
 
@@ -139,7 +139,7 @@ function HomeClient() {
 
                                     </div>
 
-                                    <div className="max-w-[126px] flex justify-between pt-[18px]">
+                                    <Link to='/coursefee' className="max-w-[126px] flex justify-between pt-[18px]">
                                         <div className="w-[41px] h-[41px] rounded-full bg-[#fff] pt-[10px]">
                                             <img className="m-0 m-auto" src={vector_direct} alt="abc"></img>
                                         </div>
@@ -148,7 +148,7 @@ function HomeClient() {
                                                 Chi tiết
                                             </p>
                                         </div>
-                                    </div>
+                                    </Link>
                                 </div>
                             </div>
                             <div>
@@ -161,7 +161,7 @@ function HomeClient() {
             </div>
 
 
-            <div className="max-w-[1288px] mx-auto pl-[24px] pr-[24px] pt-[142px]">
+            <div className="max-w-[1288px] mx-auto pl-[24px] pr-[24px] pt-[142px] font-poppins">
                 <div className="">
                     <h1 className="font-semibold text-[50px] leading-[62.5px] text-center">Khóa học miễn phí</h1>
                 </div>
@@ -181,7 +181,7 @@ function HomeClient() {
 
                                 </div>
 
-                                <div className="max-w-[126px] flex justify-between pt-[18px]">
+                                <Link to='/coursefree' className="max-w-[126px] flex justify-between pt-[18px]">
                                     <div className="w-[41px] h-[41px] rounded-full bg-[#000] pt-[10px]">
                                         <img className="m-0 m-auto" src={vector_direct} alt="abc"></img>
                                     </div>
@@ -190,7 +190,7 @@ function HomeClient() {
                                             Chi tiết
                                         </p>
                                     </div>
-                                </div>
+                                </Link>
 
                             </div>
 
@@ -216,7 +216,7 @@ function HomeClient() {
 
                                     </div>
 
-                                    <div className="max-w-[126px] flex justify-between pt-[18px]">
+                                    <Link to='/coursefree' className="max-w-[126px] flex justify-between pt-[18px]">
                                         <div className="w-[41px] h-[41px] rounded-full bg-[#000] pt-[10px]">
                                             <img className="m-0 m-auto" src={vector_direct} alt="abc"></img>
                                         </div>
@@ -225,7 +225,7 @@ function HomeClient() {
                                                 Chi tiết
                                             </p>
                                         </div>
-                                    </div>
+                                    </Link>
                                 </div>
                             </div>
 
@@ -248,7 +248,7 @@ function HomeClient() {
 
                                     </div>
 
-                                    <div className="max-w-[126px] flex justify-between pt-[18px]">
+                                    <Link to='/coursefree' className="max-w-[126px] flex justify-between pt-[18px]">
                                         <div className="w-[41px] h-[41px] rounded-full bg-[#fff] pt-[10px]">
                                             <img className="m-0 m-auto" src={vector_direct} alt="abc"></img>
                                         </div>
@@ -257,7 +257,7 @@ function HomeClient() {
                                                 Chi tiết
                                             </p>
                                         </div>
-                                    </div>
+                                    </Link>
                                 </div>
                             </div>
                             <div>
@@ -281,7 +281,7 @@ function HomeClient() {
 
                                 </div>
 
-                                <div className="max-w-[126px] flex justify-between pt-[18px]">
+                                <Link to='/coursefree' className="max-w-[126px] flex justify-between pt-[18px]">
                                     <div className="w-[41px] h-[41px] rounded-full bg-[#000] pt-[10px]">
                                         <img className="m-0 m-auto" src={vector_direct} alt="abc"></img>
                                     </div>
@@ -290,7 +290,7 @@ function HomeClient() {
                                             Chi tiết
                                         </p>
                                     </div>
-                                </div>
+                                </Link>
 
                             </div>
 
@@ -313,7 +313,7 @@ function HomeClient() {
 
                                     </div>
 
-                                    <div className="max-w-[126px] flex justify-between pt-[18px]">
+                                    <Link to='/coursefree' className="max-w-[126px] flex justify-between pt-[18px]">
                                         <div className="w-[41px] h-[41px] rounded-full bg-[#000] pt-[10px]">
                                             <img className="m-0 m-auto" src={vector_direct} alt="abc"></img>
                                         </div>
@@ -322,7 +322,7 @@ function HomeClient() {
                                                 Chi tiết
                                             </p>
                                         </div>
-                                    </div>
+                                    </Link>
                                 </div>
                             </div>
 
@@ -345,7 +345,7 @@ function HomeClient() {
 
                                     </div>
 
-                                    <div className="max-w-[126px] flex justify-between pt-[18px]">
+                                    <Link to='/coursefree' className="max-w-[126px] flex justify-between pt-[18px]">
                                         <div className="w-[41px] h-[41px] rounded-full bg-[#fff] pt-[10px]">
                                             <img className="m-0 m-auto" src={vector_direct} alt="abc"></img>
                                         </div>
@@ -354,7 +354,7 @@ function HomeClient() {
                                                 Chi tiết
                                             </p>
                                         </div>
-                                    </div>
+                                    </Link>
                                 </div>
                             </div>
 
@@ -367,7 +367,7 @@ function HomeClient() {
             </div>
 
 
-            <div className="max-w-[1240px] mx-auto pt-[135px]">
+            <div className="max-w-[1240px] mx-auto pt-[135px] font-poppins">
                 <div>
                     <h1 className="font-semibold text-[50px] leading-[62.5px] text-center">
                         Thành viên

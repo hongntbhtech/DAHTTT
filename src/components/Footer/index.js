@@ -7,7 +7,7 @@ import img_ins from '../../assets/HomeClient/img_insta.png'
 function Footer() {
     return (
         <>
-            <div className="bg-gradient-to-b from-white to-[#71BC9F]">
+            <div className="bg-gradient-to-b from-white to-[#71BC9F] font-poppins">
             <div className="max-w-[1168px] mx-auto pl-[24px] pr-[24px] flex justify-between pt-[155px]">
                 <div className='max-w-[404px]'>
                     <div>
@@ -24,7 +24,7 @@ function Footer() {
                 <div className='max-w-[131px] pt-[5px]'>
                     <h3 className='font-semibold text-[18px] leading-[18px] tracking-[1.6px]'>Các trang:</h3>
                     <ul className=''>
-                        <li className='font-normal text-[16px] leading-[24px] tracking-[1.6px]'>
+                        <li className='font-normal text-[16px] leading-[24px] tracking-[1.6px] pt-[25px]'>
                             <Link>Khóa học</Link>
                         </li>
                         <li className='pt-[20px]'>
@@ -41,7 +41,7 @@ function Footer() {
 
                 <div className='max-w-[186px] pt-[5px]'>
                     <h3 className='font-semibold text-[18px] leading-[18px] tracking-[1.6px]'>
-                        Các thàn viên
+                        Các thành viên
                     </h3>
                     <ul>
                         <li className='font-normal text-[16px] leading-[24px] tracking-[1.6px] pt-[25px]'>

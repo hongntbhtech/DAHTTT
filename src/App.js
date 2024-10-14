@@ -11,6 +11,11 @@ import Blog from './Pages/Blog/index.js';
 import Course from './Pages/Course/index.js';
 import CourseSale from './Pages/CourseSale/index.js';
 import BlogDetail from './Pages/BlogDetails/index.js';
+import CourseFreeDetails from './Pages/CourseFreeDetails/index.js';
+import CourseFeeDetails from './Pages/CourseFeeDetails/index.js';
+import Checkout from './Pages/Checkout/index.js';
+import Profile from './Pages/Profile/index.js';
+import MyCourse from './Pages/MyCourse/index.js';
 
 function App() {
   return (
@@ -26,6 +31,11 @@ function App() {
         <Route path='/course' element={<Course/>}/>
         <Route path='/coursesale' element={<CourseSale/>}/>
         <Route path='blogdetail' element={<BlogDetail/>}/>
+        <Route path='coursefreedetails' element={<CourseFreeDetails/>}/>
+        <Route path='coursefeedetails' element={<CourseFeeDetails/>}/>
+        <Route path='checkout' element={<Checkout/>}/>
+        <Route path='profile' element={<Profile/>}/>
+        <Route path='mycourse' element={<MyCourse/>}/>
       </Routes> 
     </>
   );
