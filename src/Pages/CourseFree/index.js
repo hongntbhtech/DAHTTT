@@ -3,8 +3,10 @@ import bg_home from '../../assets/Home/bg_home.png'
 
 import img_map from '../../assets/CourseFee/img_map.png'
 import Footer from "../../components/Footer";
-import { Link } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
+import {useState, useEffect} from "react"
 function CourseFree(){
+    
     return(
         <>
         <div className="bg-no-repeat" style={{ backgroundImage: `url(${bg_home})` }}>
@@ -36,7 +38,7 @@ function CourseFree(){
                         <div className="w-[13px] h-[13px] rounded-full bg-[#000] mt-[5px]"></div>
                         <div className="font-normal text-[16px] leading-[24px]">Cấu trúc file HTML</div>
                     </div>
-                    <div className="flex min-w-[250px] justify-between">
+                    {/* <div className="flex min-w-[250px] justify-between">
                         <div className="w-[13px] h-[13px] rounded-full bg-[#000] mt-[5px]"></div>
                         <div className="font-normal text-[16px] leading-[24px]">Cấu trúc file HTML</div>
                     </div>
@@ -47,7 +49,7 @@ function CourseFree(){
                     <div className="flex min-w-[250px] justify-between">
                         <div className="w-[13px] h-[13px] rounded-full bg-[#000] mt-[5px]"></div>
                         <div className="font-normal text-[16px] leading-[24px]">Cấu trúc file HTML</div>
-                    </div>
+                    </div> */}
                 </div>
             </div>
 

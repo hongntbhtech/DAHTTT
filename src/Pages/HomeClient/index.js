@@ -23,11 +23,49 @@ import img_face from '../../assets/HomeClient/img_face.png'
 import img_ins from '../../assets/HomeClient/img_insta.png'
 import Footer from "../../components/Footer";
 import { Link } from 'react-router-dom'
+import { useEffect, useState } from "react";
 
 
 function HomeClient() {
+    const [item1, setItem] = useState([]);
+    
+    useEffect(() => {
+        const fetchAPI = async () => {
+                const coursesResponse = await fetch(`http://localhost:3000/courses`);
+                const coursesData = await coursesResponse.json();
+                console.log(coursesData);
+    
+                const videosResponse = await fetch(`http://localhost:3000/course_videos`);
+                const videosData = await videosResponse.json();
+                console.log(videosData);
+    
+                let fullData = [];
+                for (let i = 0; i < coursesData.length; i++) {
+                    fullData.push({...videosData.find(item => item.course_id === coursesData[i].id),...coursesData[i] });
+                }
+    
+            
+                setItem(fullData);
+                // console.log(fullData);
+        };
+    
+        fetchAPI();
+    }, []);
+    
+
+    console.log(item1);
+
     return (
         <>
+               {/* {item.map(item => (<div>
+                    {item.name}
+                    
+            </div>))} */}
+
+            {/* {item1.length > 0 && (<div>
+                {item1[0].item}
+            </div>)} */}
+        
             <div className="bg-no-repeat" style={{ backgroundImage: `url(${bg_home})` }}>
                 <LayoutHeader>
                     <div className="max-w-[1345px] mx-auto pl-[78px] pr-[24px]  flex justify-between pt-[66px] font-poppins">
@@ -51,45 +89,45 @@ function HomeClient() {
                 </div>
 
                 <div className="max-w-[1240px] mx-auto justify-between flex flex-wrap gap-[40px] pt-[60px]">
-                    <div className="min-w-[600px] min-h-[271px] flex border-[1px] border-[#000] rounded-[45px] bg-[#f3f3f3]">
-                        <div className="min-w-[500px] flex mx-auto justify-between pt-[48px]">
-                            <div className="max-w-[270px] text-center">
+                    {item1.map(item => (
+                          <div className="min-w-[600px] min-h-[271px] flex border-[1px] border-[#000] rounded-[45px] bg-[#f3f3f3]">
+                          <div className="min-w-[500px] flex mx-auto justify-between pt-[48px]">
+                              <div className="max-w-[270px] text-center">
+  
+                                  <div>
+                                      <h5 className="font-semibold text-[19px] leading-[23.75px]">{item.title}</h5>
+                                      <div className="flex justify-center pt-[20px] max-w-[217px] mx-auto">
+                                          {/* <p className="font-semibold text-[18px] leading-[22.5px] line-through">2.500.000đ</p> */}
+                                          <p className="font-semibold text-[18px] leading-[22.5px] text-red-500">{item.price}</p>
+                                      </div>
+                                      <h5 className="font-semibold text-[19px] leading-[23.75px] pt-[20px]"> {item.lesson_number}</h5>
+  
+                                  </div>
+  
+                                  <Link to= {`/coursefee/${item.id}`} className="max-w-[126px] flex justify-between pt-[18px]">
+                                      {/* <Link> */}
+                                      <div className="w-[41px] h-[41px] rounded-full bg-[#000] pt-[10px]">
+                                          <img className="m-0 m-auto" src={vector_direct} alt="abc"></img>
+                                      </div>
+                                      <div>
+                                          <p className="font-normal text-[20px] leading-[28px] pt-[8px]">
+                                              Chi tiết
+                                          </p>
+                                      </div>
+                                      {/* </Link> */}
+                                  </Link>
+  
+                              </div>
+  
+                              <div>
+                                  <img src={img_htmlcss} alt="abc"></img>
+                              </div>
+                          </div>
+                      </div>
+                    ))}
+                  
 
-                                <div>
-                                    <h5 className="font-semibold text-[19px] leading-[23.75px]">Khóa học HTML, CSS cơ bản</h5>
-                                    <div className="flex justify-between pt-[20px] max-w-[217px] mx-auto">
-                                        <p className="font-semibold text-[18px] leading-[22.5px] line-through">2.500.000đ</p>
-                                        <p className="font-semibold text-[18px] leading-[22.5px] text-red-500">1.500.000đ</p>
-                                    </div>
-                                    <h5 className="font-semibold text-[19px] leading-[23.75px] pt-[20px]">  Số lượng bài học: 23 video</h5>
-
-                                </div>
-
-                                <Link to='/coursefee' className="max-w-[126px] flex justify-between pt-[18px]">
-                                    {/* <Link> */}
-                                    <div className="w-[41px] h-[41px] rounded-full bg-[#000] pt-[10px]">
-                                        <img className="m-0 m-auto" src={vector_direct} alt="abc"></img>
-                                    </div>
-                                    <div>
-                                        <p className="font-normal text-[20px] leading-[28px] pt-[8px]">
-                                            Chi tiết
-                                        </p>
-                                    </div>
-                                    {/* </Link> */}
-                                </Link>
-
-                            </div>
-
-                            <div>
-                                <img src={img_htmlcss} alt="abc"></img>
-                            </div>
-                        </div>
-
-
-
-                    </div>
-
-                    <div className="min-w-[600px] min-h-[271px] flex border-[1px] border-[#000] rounded-[45px] bg-[#71bc9f]">
+                    {/* <div className="min-w-[600px] min-h-[271px] flex border-[1px] border-[#000] rounded-[45px] bg-[#71bc9f]">
                         <div className="min-w-[500px] flex mx-auto justify-between pt-[48px]">
                             <div className="max-w-[270px] text-center">
                                 <div>
@@ -123,9 +161,9 @@ function HomeClient() {
 
 
 
-                    </div>
+                    </div> */}
 
-                    <div className="min-w-[600px] min-h-[271px] flex border-[1px] border-[#000] rounded-[45px] bg-[#191a23]">
+                    {/* <div className="min-w-[600px] min-h-[271px] flex border-[1px] border-[#000] rounded-[45px] bg-[#191a23]">
                         <div className="min-w-[500px] flex mx-auto justify-between pt-[48px]">
                             <div className="max-w-[270px] text-center">
                                 <div>
@@ -156,7 +194,7 @@ function HomeClient() {
                             </div>
                         </div>
 
-                    </div>
+                    </div> */}
                 </div>
             </div>
 

@@ -34,9 +34,9 @@ function Header() {
         <>
             <div className="max-w-[1188px] mx-auto pl-[24px] pr-[24px] flex justify-between pt-[25px] font-poppins">
                 <div className='flex min-w-[627.84px] justify-between'>
-                    <div>
+                    <Link to='/homeclient'>
                         <img src={logo} alt='abc'></img>
-                    </div>
+                    </Link>
 
                     <div className='pt-[35px]'>
                         <ul className='flex min-w-[400px] justify-between'>
